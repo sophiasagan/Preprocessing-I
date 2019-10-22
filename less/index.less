@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,25 +92,45 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
+	background-color: #393e46;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,10 +138,211 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
 }
 
+// Begin variable section
+
+@lady: #eeeeee;
+@highlightblue:#112d4e;
+@rem1-1: 1.1rem;
+
+// Begin element selector styling
+
+footer {
+	background-color: @lady;
+	text-align: center;
+	margin: 0 0 2rem 0;
+	padding: 2rem 0 2rem 0;
+}
+
+.main-container {
+	width: 100%;
+}
+
+.nav-container {
+	nav {
+		display: flex;
+		justify-content: center;
+		margin: 2rem 2rem;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		// justify-content: center;
+		// align-items: center;
+	}
+
+	li {
+		margin: 0 1rem;
+	}
+
+	li a {
+		text-decoration: none;
+		color: @highlightblue;
+	}
+
+	li a:hover {
+		font-size: @rem1-1;
+		transition-duration: .2s;
+		color: black;
+		text-decoration: shadow;
+	}
+}
+
+.main-content-container {
+	background-color: @lady;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.hero-heading {
+
+	margin: 0 2rem 0rem 2rem;
+	padding: 0 0 2rem 0;
+
+	img {
+		width: 30%;
+		height: auto;
+		margin: 2rem 0 2rem 0;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 500;
+		margin: 0 0 1rem 0;
+	}
+
+	h3 {
+		font-size: 2rem;
+		font-weight: 600;
+		color: @highlightblue;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+		margin: 1rem 0;
+		padding: 0 0 1.5rem 0;
+		border-bottom: 1px solid gray;
+	}
+
+	p {
+		margin: 0 0 1rem 0;
+		font-size: @rem1-1;
+	}
+
+	button {
+		background-color: @highlightblue;
+		border-radius: 5px;
+		padding: 1rem 2rem;
+		margin: 0 0 3rem 0;
+		
+
+		 a {
+			text-decoration: none;
+			color: ##f0f5f9;
+			font-size: 1rem;
+
+		
+		}
+	}
+}
+
+.middle-content-container {
+	background-color: #f0f5f9;
+}
+
+.middle-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.about-me {
+		width: 50%;
+		text-align: center;
+		margin: 0 2rem 0 3rem;
+
+		h2 {
+			font-size: 2rem;
+			margin: 2rem 0 1rem 0;
+			color: @highlightblue;
+		}
+
+		p {
+			font-size: 1.1rem;
+			margin: 1rem 0;
+		}
+
+		p:last-child {
+			margin: 0 0 2rem 0;
+		}
+	}
+
+	.skills {
+		width: 40%;
+
+		h2 {
+			font-size: 2rem;
+			margin: 2rem 0 1rem 0;
+			color: @highlightblue;
+			text-align: center;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		li {
+			// border: .5px solid @lady;
+			padding: 1rem 1rem;
+		}
+	}
+}
+
+footer .contact {
+	h2 {
+		font-size: 2rem;
+		margin: 1rem 0 2rem 0;
+		color: @highlightblue;
+	}
+
+	h3 {
+		margin: 0 0 3rem 0;
+		font-size: .8rem;
+	}
+
+	a {
+		text-decoration: underline;
+		color: @highlightblue;
+	}
+
+}
+
+.work-history-container {
+
+	.work-history {
+		padding: 4rem 0 4rem 0;
+		text-align: center;
+
+		h2 {
+			font-size: 2rem;
+			margin: 0 0 1rem 0;
+			color: @highlightblue;
+		}
+
+		ul {
+			margin: 0 0 0 1.5rem;
+			// list-style-type: disc;
+			font-size: 1rem;
+		}
+	}
+}
