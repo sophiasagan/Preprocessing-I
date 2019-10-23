@@ -151,7 +151,7 @@ body {
 
 @lady: #eeeeee;
 @highlightblue:#112d4e;
-@rem1-1: 1.1rem;
+@base-rem: 1.1rem;
 
 // Begin element selector styling
 
@@ -190,10 +190,11 @@ footer {
 	}
 
 	li a:hover {
-		font-size: @rem1-1;
+		font-size: @base-rem;
 		transition-duration: .2s;
 		color: black;
 		text-decoration: shadow;
+		text-decoration: none;
 	}
 }
 
@@ -235,14 +236,14 @@ footer {
 
 	p {
 		margin: 0 0 1rem 0;
-		font-size: @rem1-1;
+		font-size: @base-rem;
 	}
 
 	button {
 		background-color: @highlightblue;
 		border-radius: 5px;
 		padding: 1rem 2rem;
-		margin: 0 0 3rem 0;
+		margin: 3rem 0 3rem 0;
 		
 
 		 a {
